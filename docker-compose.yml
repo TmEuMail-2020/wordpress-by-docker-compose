@@ -17,7 +17,8 @@ services:
       - db
     image: wordpress:latest
     volumes:
-      - src:/var/www/html
+      # must have dot! so becomes anonymous volume 
+      - ./src:/var/www/html
     ports:
       - "8000:80"
     restart: always
@@ -29,4 +30,5 @@ services:
 
 volumes:
   database:
-  src:
+# as quick way to tinker wordpress, removed named volume
+#  src:
