@@ -7,3 +7,20 @@ tasks:
 vscode:
   extensions:
     - ms-azuretools.vscode-docker
+
+# all branches to do prebuild
+github:
+  prebuilds:
+    branches: true 
+
+# enable useful plugins
+jetbrains:
+  phpstorm:
+    plugins:
+      - com.intellij.lang.jsgraphql
+      - org.sonarlint.idea
+      - com.intellij.ml.llm
+      - com.sourcegraph.jetbrains
+# sometimes caused workspace with jetbrains not able to start, hence comment out
+# prebuilds:
+# version: stable
